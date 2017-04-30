@@ -1,36 +1,24 @@
-import { Component } from '@angular/core';
-
-export class Hero {
-  id: number;
-  name: string;
-}
-
-const HEROES: Hero[] = [
-  { id: 11, name: 'Mr. Nice' },
-  { id: 12, name: 'Narco' },
-  { id: 13, name: 'Bombasto' },
-  { id: 14, name: 'Celeritas' },
-  { id: 15, name: 'Magneta' },
-  { id: 16, name: 'RubberMan' },
-  { id: 17, name: 'Dynama' },
-  { id: 18, name: 'Dr IQ' },
-  { id: 19, name: 'Magma' },
-  { id: 20, name: 'Tornado' }
-];
+import {Component} from '@angular/core';
+import { HeroesComponent } from "./heroes.component";
+import { Hero } from "./db/hero";
 
 
 @Component({
-  selector: 'my-app',
-  templateUrl: 'dist/app/app.component.html',
-  styleUrls: ['dist/app/app.component.css']
-})
-export class AppComponent { 
-  title = 'Tour of Heroes';
-  heroes = HEROES;
-  selectedHero:Hero;
+    selector: 'my-app',
+    template: `
+  <h1>{{title}}</h1>
+  <nav>
+    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+    <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+  </nav>
+  <router-outlet></router-outlet>
+`,
 
-  onSelect(hero):void {
-    this.selectedHero = hero;
-  }
-  
+ styleUrls:['file://'+__dirname+'dist/app/app.component.css']
+
+})
+export class AppComponent {
+    title = "Tour of test";
+
+
 }
