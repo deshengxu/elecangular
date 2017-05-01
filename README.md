@@ -11,11 +11,14 @@ Apr.29th progress:
 
 1) Not allowed to access local file
 
-solution: added "express" and a light server will run on port 3333.
+solution: 
+1.1) better solution: using hash tag in routing definition.
+
+1.2) added "express" and a light server will run on port 3333.
 
 2) 404 during routing
 
-solution: added "routing" to express server.
+same as above.
 
 
 it will include:
