@@ -13,4 +13,8 @@ app.get('/dashboard', function (req, res) {
 app.get('/heroes', function (req, res) {
     res.sendfile(__dirname + '/index.html');
 });
+app.get('/detail/:id', function (req, res) {
+    res.sendfile(__dirname + '/index.html');
+});
+
 app.listen(3333);

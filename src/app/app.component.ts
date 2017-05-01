@@ -18,7 +18,7 @@ import { Hero } from "./db/hero";
 
 })
 export class AppComponent {
-    title = "Tour of test";
+    title = "Tour of Heroes";
 
 
 }
