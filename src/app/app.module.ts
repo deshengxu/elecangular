@@ -12,8 +12,6 @@ import { DashboardComponent } from "./dashboard.component";
 import { AppRoutingModule } from "./app-routing.module";
 import {APP_BASE_HREF} from '@angular/common';
 
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './in-memory-data.service';
 
 @NgModule({
   imports:      [ BrowserModule,

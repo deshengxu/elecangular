@@ -1,9 +1,11 @@
-import { Component, Input , OnInit}    from '@angular/core';
+import { Component, Input , OnInit, NgZone}    from '@angular/core';
 import { Hero }         from './db/hero';
 import { HeroService } from "./service/hero.service";
 import { ActivatedRoute, Params }   from '@angular/router';
 import { Location }                 from '@angular/common';
 import 'rxjs/add/operator/switchMap';
+import { Router }         from '@angular/router';
+import { Subscription } from 'rxjs/Subscription';
 
 
 @Component({
@@ -13,12 +15,28 @@ import 'rxjs/add/operator/switchMap';
 })
 export class HeroDetailComponent implements OnInit{
     @Input() hero: Hero;
+    subscription: Subscription;
 
     constructor(
+        private ngzone:NgZone,
         private heroService: HeroService,
         private route: ActivatedRoute,
+        private router:Router,
         private location: Location
-    ){}
+    ){
+        this.subscription = this.heroService.heroesChange.subscribe(heroes =>
+      {
+        this.ngzone.run(()=>{
+          this.router.navigate(['/heroes']);
+        })
+        
+        
+      });
+    }
+
+    ngOnDestroy(){
+        this.subscription.unsubscribe();
+    }
 
     ngOnInit(): void {
     this.route.params
