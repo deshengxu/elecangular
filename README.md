@@ -5,6 +5,8 @@ Electron Quick Start: https://electron.atom.io/docs/tutorial/quick-start/
 Angular 2 Quick Start: https://angular.io/docs/ts/latest/quickstart.html
 
 This practice will build Heroes example (from Angular 2) into an Electron APP.
+May.6th Progress:
+![alt May.6th progress](https://github.com/xudesheng/elecangular/raw/master/doc/electron3.png)
 
 Apr.30th progress:
 ![alt Apr.30th progress](https://github.com/xudesheng/elecangular/raw/master/doc/electron1.png)
