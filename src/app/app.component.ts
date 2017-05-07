@@ -39,13 +39,23 @@ export class AppComponent {
         dialog.showOpenDialog( (fileNames) => {
           this.openDialogActive = false;
           if(fileNames === undefined) return;
-          let fileName = fileNames[0];
-          var json = readFileSync(fileName,"utf8");
-          var heroes:Hero[] = eval(json);
-          this.heroService.setHeroes(heroes)
-            .then(()=>{
-              
+          try{
+            let fileName = fileNames[0];
+            var json = readFileSync(fileName,"utf8");
+            var heroes:Hero[] = eval(json);
+            this.heroService.setHeroes(heroes)
+              .then(()=>{
+                
+              });
+          }
+          catch(err){
+            let myNotification: Notification;
+            //console.log(err);
+            myNotification = new Notification('Error', {
+              body: err.message
             });
+          }
+          
           
         })
       }
