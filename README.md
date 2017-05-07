@@ -5,7 +5,13 @@ Electron Quick Start: https://electron.atom.io/docs/tutorial/quick-start/
 Angular 2 Quick Start: https://angular.io/docs/ts/latest/quickstart.html
 
 This practice will build Heroes example (from Angular 2) into an Electron APP.
+
 May.6th Progress:
+
+1) Add "Open" to query data from JSON file.
+
+2) add "Save as" to save current JSON data into a JSON file.
+
 ![alt May.6th progress](https://github.com/xudesheng/elecangular/raw/master/doc/electron3.png)
 
 Apr.30th progress:
