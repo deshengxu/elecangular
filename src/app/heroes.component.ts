@@ -22,7 +22,8 @@ export class HeroesComponent implements OnInit {
       {
         this.ngzone.run(()=>{
           this.heroes = heroes;
-          console.log(this.heroes);
+          this.selectedHero=null;
+          //console.log(this.heroes);
         })
         
         
